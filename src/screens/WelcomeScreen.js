@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#4ecdc4',
     marginVertical:10
   }
-});
+}); 
