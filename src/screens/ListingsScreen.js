@@ -104,7 +104,7 @@ foundation: "421",
 description: "Located in a marshy lagoon in the Adriatic Sea, between the mouths of the Po and Piave rivers, the city of Venice is made up of 120 small islands, connected to each other by hundreds of bridges, rivers and canals, some of them of great beauty."
 }
 ];
-function ListingsScreen(props) {
+function ListingsScreen({navigation}) {
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -115,6 +115,7 @@ function ListingsScreen(props) {
             title={item.title}
             subTitle={item.country}
             image={item.image}
+            navigation
           />
         }
         ItemSeparatorComponent={ListItemSeparator}
