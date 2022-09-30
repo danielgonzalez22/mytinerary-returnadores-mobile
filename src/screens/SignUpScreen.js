@@ -3,6 +3,7 @@ import { StyleSheet,Image } from 'react-native'
 import AppButton from '../components/AppButton';
 import AppTextInput from '../components/AppTextInput';
 import Screen from '../components/Screen';
+import colors from '../config/colors';
 function SignUpScreen(props) {
   return (
     <Screen style={styles.container}>
@@ -55,7 +56,7 @@ function SignUpScreen(props) {
         textContentType='password'
         secureTextEntry
       />
-      <AppButton title='Sign Up' color='#f64f4f' width={'70%'} />
+      <AppButton title='Sign Up' color={colors.primary} width={'70%'} />
     </Screen>
   );
 }
@@ -64,13 +65,14 @@ export default SignUpScreen;
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    alignItems:'center'
+    alignItems:'center',
+    backgroundColor:colors.beige
   },
   logo: {
-    width: 80,
-    height: 80,
+    width: 150,
+    height: 70,
+    resizeMode:'contain',
     alignSelf: 'center',
-    marginTop: 50,
-    marginBottom: 20
+    marginBottom: 10
   }
 })

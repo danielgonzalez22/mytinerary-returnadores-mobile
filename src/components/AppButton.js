@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 15,
+    padding: 10,
     marginBottom:10,
   },
   text: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 15,
     textTransform: 'uppercase',
     fontWeight: 'bold'
   }

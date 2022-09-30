@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     flexDirection: 'row',
     width: '100%',
-    padding: 15,
+    padding: 13,
     marginVertical: 10
   },
   icon:{
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     color:colors.dark,
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir'
   }
 })

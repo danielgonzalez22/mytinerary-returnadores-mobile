@@ -22,10 +22,10 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
   <Tab.Navigator
     tabBarOptions={{
-      activeBackgroundColor: colors.medium,
-      activeTintColor: colors.light,
-      inactiveBackgroundColor: colors.black,
-      inactiveTintColor: colors.light
+      activeBackgroundColor: colors.beige,
+      activeTintColor: colors.primary,
+      inactiveBackgroundColor: colors.white,
+      inactiveTintColor: colors.primary
     }}>
       <Tab.Screen
       name='My account'

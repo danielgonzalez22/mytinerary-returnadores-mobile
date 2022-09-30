@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   screen: {
-    backgroundColor: colors.light
+    backgroundColor: colors.beige
   }
 })

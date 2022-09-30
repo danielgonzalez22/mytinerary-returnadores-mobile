@@ -3,6 +3,7 @@ import { StyleSheet,Image } from 'react-native'
 import AppButton from '../components/AppButton';
 import AppTextInput from '../components/AppTextInput';
 import Screen from '../components/Screen';
+import colors from '../config/colors';
 function LoginScreen(props) {
   return (
     <Screen style={styles.container}>
@@ -23,7 +24,7 @@ function LoginScreen(props) {
         textContentType='password'
         secureTextEntry
       />
-      <AppButton title='Login'color='#f64f4f' width={'70%'} />
+      <AppButton title='Login'color={colors.primary} width={'70%'} />
     </Screen>
   );
 }
@@ -32,7 +33,8 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    alignItems:'center'
+    alignItems:'center',
+    backgroundColor:colors.beige
   },
   logo: {
     width: 80,
