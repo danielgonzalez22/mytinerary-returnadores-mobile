@@ -10,7 +10,8 @@ import {
   Platform
 }
   from 'react-native';
-export default function WelcomeScreen() {
+
+export default function WelcomeScreen({navigation}) {
   return (
     <Screen style={styles.screen}>
       <ImageBackground style={styles.backImage} source={require("../../assets/background-map-vintage.jpg")}>
@@ -22,8 +23,8 @@ export default function WelcomeScreen() {
           <Image style={{ height: '95%', resizeMode: 'cover' }} source={{ uri: 'https://fondosmil.com/fondo/63364.jpg' }} />
         </View>
         <View style={styles.buttonsContainer}>
-          <AppButton title="Login" color='#a36226' />
-          <AppButton title="Sign Up" color='#a36226' />
+          <AppButton title="Login" onPress={() => navigation.navigate('Login')} color='#a36226' />
+          <AppButton title="Sign Up" onPress={() => navigation.navigate('Sign Up')} color='#a36226' />
         </View>
       </ImageBackground>
     </Screen>

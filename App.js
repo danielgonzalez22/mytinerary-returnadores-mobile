@@ -15,6 +15,8 @@ import ListItem from './src/components/ListItem';
 import AccountScreen from './src/screens/AccountScreen';
 import ListingsScreen from './src/screens/ListingsScreen';
 import colors from './src/config/colors';
+import AuthNavigator from './src/navigation/AuthNavigator'
+import HomeButton from './src/navigation/HomeButton';
 
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
@@ -25,14 +27,25 @@ const TabNavigator = () => (
       inactiveBackgroundColor: colors.black,
       inactiveTintColor: colors.light
     }}>
-    <Tab.Screen
-      name='Home'
-      component={WelcomeScreen}
+      <Tab.Screen
+      name='My account'
+      component={AccountScreen}
       options={{
         headerShown:false,
         tabBarIcon: ({ size, color }) =>
-          <MaterialCommunityIcons name='home' size={size} color={color} />
+          <MaterialCommunityIcons name='account' size={size} color={color} />
       }}
+    />
+    <Tab.Screen
+      name='Home'
+      component={AuthNavigator}
+      options={({navigation})=>({
+        headerShown:false,
+        tabBarButton:()=> 
+        <HomeButton onPress={()=> navigation.navigate('Home')}/>,
+        tabBarIcon: ({ size, color }) =>
+          <MaterialCommunityIcons name='home-circle' size={size} color={color} />
+      })}
     />
     <Tab.Screen
       name='Cities'
@@ -48,7 +61,7 @@ const TabNavigator = () => (
 export default function App() {
   return (
     <NavigationContainer>
-      <TabNavigator />
+      <TabNavigator/>
     </NavigationContainer>
   );
 }
